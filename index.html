@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#f59e0b">
+    <meta name="description" content="تطبيق ترفيهي يحوي 1000 نكتة مضحكة: نكت عربية حسب البلدان، نكت حسب العمر، نكت أجنبية حسب القارات، الأكثر تقييماً ونكت المسابقات العالمية">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>نكت 1000 — 1000 نكتة مضحكة</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== Header ===== -->
+    <header class="header">
+        <button class="icon-btn" id="menuBtn" aria-label="menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div class="logo" id="logoHome"><span class="logo-emoji">😂</span><span data-i18n="app_name">نكت 1000</span></div>
+        <div class="header-actions">
+            <button class="icon-btn" id="randomBtn" title="🎲" aria-label="random">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            </button>
+            <button class="lang-btn" id="langBtn" aria-label="language">FR</button>
+        </div>
+    </header>
+
+    <!-- ===== Sidebar ===== -->
+    <div class="overlay" id="overlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+            <div class="sidebar-logo">😂 <b data-i18n="app_name">نكت 1000</b></div>
+            <div class="sidebar-tag" data-i18n="tagline">ألف نكتة تُضحّك من القلب</div>
+        </div>
+        <nav class="sidebar-nav" id="sidebarNav">
+            <a class="nav-item active" data-view="home"><span>🏠</span><b data-i18n="home">الرئيسية</b></a>
+            <a class="nav-item" data-view="browse"><span>🗂️</span><b data-i18n="browse">تصفّح النكت</b></a>
+            <a class="nav-item" data-view="top"><span>🏆</span><b data-i18n="top">الأعلى تقييماً</b></a>
+            <a class="nav-item" data-view="fav"><span>❤️</span><b data-i18n="favorites">المفضّلة</b></a>
+            <a class="nav-item" data-view="media"><span>🎬</span><b data-i18n="media">فيديو ومواقع</b></a>
+        </nav>
+        <div class="sidebar-stats">
+            <div class="stat-pill"><b id="statTotal">1000</b><span data-i18n="jokes_count">نكتة</span></div>
+            <div class="stat-pill"><b id="statFav">0</b><span data-i18n="favorites">المفضّلة</span></div>
+        </div>
+        <button class="install-btn" id="installBtn" hidden>📲 <span data-i18n="install">تثبيت التطبيق</span></button>
+    </aside>
+
+    <!-- ===== Main ===== -->
+    <main class="main">
+
+        <!-- HOME -->
+        <section class="view active" id="view-home">
+            <div class="hero">
+                <div class="hero-badge" data-i18n="total_badge">1000 نكتة</div>
+                <h1>😂 <span data-i18n="app_name">نكت 1000</span></h1>
+                <p data-i18n="tagline">ألف نكتة تُضحّك من القلب</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="heroRandom">🎲 <span data-i18n="surprise">فاجئني!</span></button>
+                    <button class="btn btn-ghost" id="heroDaily">📅 <span data-i18n="daily">نكتة اليوم</span></button>
+                </div>
+            </div>
+
+            <!-- Daily joke -->
+            <div class="daily-box hidden" id="dailyBox">
+                <div class="box-title">📅 <span data-i18n="daily_title">نكتة اليوم</span></div>
+                <div id="dailyJoke"></div>
+            </div>
+
+            <!-- Sections -->
+            <h2 class="sec-title"><span data-i18n="sections">الأقسام</span></h2>
+            <div class="cards" id="homeCards"></div>
+
+            <h2 class="sec-title"><span data-i18n="age_section">نكت حسب العمر</span></h2>
+            <div class="cards" id="ageCards"></div>
+        </section>
+
+        <!-- BROWSE -->
+        <section class="view" id="view-browse">
+            <div class="search-wrap">
+                <input type="search" id="searchInput" class="search-input" data-i18n-ph="search" placeholder="ابحث عن نكتة...">
+            </div>
+
+            <div class="chip-row" id="catChips"></div>
+            <div class="chip-row sub-row hidden" id="subChips"></div>
+
+            <div class="list-meta">
+                <span id="resultCount"></span>
+                <div class="sort-wrap">
+                    <select id="sortSelect">
+                        <option value="hot" data-i18n="sort_hot">الأعلى تقييماً</option>
+                        <option value="new" data-i18n="sort_new">الأحدث</option>
+                        <option value="az" data-i18n="sort_az">أبجدياً</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="jokes" id="jokeList"></div>
+            <div class="empty hidden" id="emptyState">😕 <p data-i18n="no_results">لا توجد نكت مطابقة. جرّب كلمة أخرى!</p></div>
+            <button class="btn btn-more hidden" id="moreBtn" data-i18n="more">المزيد...</button>
+        </section>
+
+        <!-- TOP -->
+        <section class="view" id="view-top">
+            <div class="sec-head">
+                <div class="sec-emoji">🏆</div>
+                <h2 data-i18n="rating_title">النكت الأكثر تقييماً</h2>
+                <p data-i18n="rating_desc">مرتّبة حسب تقييم القرّاء</p>
+            </div>
+            <div class="jokes" id="topList"></div>
+            <button class="btn btn-more hidden" id="topMoreBtn" data-i18n="more">المزيد...</button>
+        </section>
+
+        <!-- FAVORITES -->
+        <section class="view" id="view-fav">
+            <div class="sec-head">
+                <div class="sec-emoji">❤️</div>
+                <h2 data-i18n="fav_title">نكتك المفضّلة</h2>
+            </div>
+            <div class="jokes" id="favList"></div>
+            <div class="empty" id="favEmpty">😍 <p data-i18n="fav_empty">لم تُضِف أي نكتة بعد ❤️</p></div>
+        </section>
+
+        <!-- MEDIA -->
+        <section class="view" id="view-media">
+            <div class="sec-head">
+                <div class="sec-emoji">🎬</div>
+                <h2 data-i18n="videos_title">فيديوهات النكت على يوتيوب</h2>
+                <p data-i18n="videos_desc">أكثر مقاطع النكت المضحكة انتشاراً — اضغط للفتح في يوتيوب</p>
+            </div>
+            <div class="video-grid" id="videoList"></div>
+
+            <div class="sec-head" style="margin-top:28px">
+                <div class="sec-emoji">🔗</div>
+                <h2 data-i18n="sources_title">المصادر والمواقع المفتوحة</h2>
+                <p data-i18n="sources_desc">تعتمد نكت هذا التطبيق على مصادر مفتوحة وروابط مواقع مشهورة</p>
+            </div>
+            <div class="source-list" id="sourceList"></div>
+
+            <div class="disclaimer" id="disclaimerBox"></div>
+        </section>
+    </main>
+
+    <!-- ===== Joke modal ===== -->
+    <div class="modal" id="jokeModal">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-label" id="modalLabel">😂</div>
+            <div class="modal-text" id="modalText"></div>
+            <div class="modal-tags" id="modalTags"></div>
+            <div class="modal-rating" id="modalRating"></div>
+            <div class="modal-actions">
+                <button class="act-btn" id="mFav">❤️</button>
+                <button class="act-btn" id="mShare">📤</button>
+                <button class="act-btn" id="mCopy">📋</button>
+                <button class="btn btn-primary" id="mNext" data-i18n="next">النكتة التالية</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 18+ gate ===== -->
+    <div class="modal" id="gateModal">
+        <div class="modal-card gate-card">
+            <div class="gate-icon">🔞</div>
+            <p id="gateText">هذا القسم يحتوي نكتاً للكبار فقط (+18). هل تتجاوز 18 عاماً؟</p>
+            <div class="gate-actions">
+                <button class="btn btn-primary" id="gateYes" data-i18n="yes">نعم، عمري فوق 18</button>
+                <button class="btn btn-ghost" id="gateNo" data-i18n="no">لا، ارجع للخلف</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Toast ===== -->
+    <div class="toast" id="toast"></div>
+
+    <footer class="footer">
+        <p>😂 <span data-i18n="footer_rights">تطبيق ترفيهي مجاني للمتعة والضحك</span></p>
+    </footer>
+
+    <script src="data/meta.js"></script>
+    <script src="data/ar-1.js"></script>
+    <script src="data/ar-2.js"></script>
+    <script src="data/world-1.js"></script>
+    <script src="data/world-2.js"></script>
+    <script src="data/world-3.js"></script>
+    <script src="data/age-kids.js"></script>
+    <script src="data/age-mat.js"></script>
+    <script src="data/age-18.js"></script>
+    <script src="data/famous.js"></script>
+    <script src="data/contest.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

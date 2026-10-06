@@ -1,0 +1,43 @@
+{
+    "name": "1000 نكتة - مكتبة النكت الضاحكة",
+    "short_name": "نكت 1000",
+    "description": "تطبيق ترفيهي تفاعلي يحوي 1000 نكتة مضحكة: نكت عربية حسب البلدان، نكت حسب العمر، نكت أجنبية حسب القارات، النكت الأكثر تقييماً ونكت المسابقات العالمية",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#fff7e6",
+    "theme_color": "#f59e0b",
+    "orientation": "portrait-primary",
+    "scope": "./",
+    "lang": "ar",
+    "dir": "rtl",
+    "categories": ["entertainment", "humor", "lifestyle"],
+    "icons": [
+        { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+        { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+        { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+        { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+    ],
+    "shortcuts": [
+        {
+            "name": "نكتة عشوائية",
+            "short_name": "عشوائي",
+            "description": "أظهر لي نكتة عشوائية فوراً",
+            "url": "./index.html?view=random",
+            "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+        },
+        {
+            "name": "النكت الأكثر تقييماً",
+            "short_name": "الأعلى تقييماً",
+            "description": "تصفّح النكت الأعلى تقييماً",
+            "url": "./index.html?view=top",
+            "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+        },
+        {
+            "name": "نكتة اليوم",
+            "short_name": "اليوم",
+            "description": "نكتة اليوم المختارة تلقائياً",
+            "url": "./index.html?view=daily",
+            "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+        }
+    ]
+}
