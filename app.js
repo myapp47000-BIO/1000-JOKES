@@ -47,7 +47,7 @@
         $$('[data-i18n-ph]').forEach((el) => { el.placeholder = c[el.dataset.i18nPh] || el.placeholder; });
         $('#gateText').textContent = t('kids_confirm');
         $('#disclaimerBox').textContent = t('disclaimer');
-        document.title = (lang === 'fr' ? '1000 Blagues — ' : 'نكت 1000 — ') + (lang === 'fr' ? c.tagline : '1000 نكتة مضحكة');
+        document.title = (lang === 'fr' ? '1400 Blagues — ' : 'نكت 1400 — ') + (lang === 'fr' ? c.tagline : '1400 نكتة مضحكة');
         buildHomeCards();
         buildChips();
         renderCurrent(true);

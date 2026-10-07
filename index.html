@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#f59e0b">
-    <meta name="description" content="تطبيق ترفيهي يحوي 1000 نكتة مضحكة: نكت عربية حسب البلدان، نكت حسب العمر، نكت أجنبية حسب القارات، الأكثر تقييماً ونكت المسابقات العالمية">
+    <meta name="description" content="تطبيق ترفيهي يحوي 1400 نكتة مضحكة: نكت عربية حسب البلدان، نكت حسب العمر، نكت أجنبية حسب القارات، الأكثر تقييماً ونكت المسابقات العالمية">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>نكت 1000 — 1000 نكتة مضحكة</title>
+    <title>نكت 1400 — 1400 نكتة مضحكة</title>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -22,7 +22,7 @@
         <button class="icon-btn" id="menuBtn" aria-label="menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
-        <div class="logo" id="logoHome"><span class="logo-emoji">😂</span><span data-i18n="app_name">نكت 1000</span></div>
+        <div class="logo" id="logoHome"><span class="logo-emoji">😂</span><span data-i18n="app_name">نكت 1400</span></div>
         <div class="header-actions">
             <button class="icon-btn" id="randomBtn" title="🎲" aria-label="random">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
@@ -35,8 +35,8 @@
     <div class="overlay" id="overlay"></div>
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-head">
-            <div class="sidebar-logo">😂 <b data-i18n="app_name">نكت 1000</b></div>
-            <div class="sidebar-tag" data-i18n="tagline">ألف نكتة تُضحّك من القلب</div>
+            <div class="sidebar-logo">😂 <b data-i18n="app_name">نكت 1400</b></div>
+            <div class="sidebar-tag" data-i18n="tagline">ألف وأربعمئة نكتة تُضحّك من القلب</div>
         </div>
         <nav class="sidebar-nav" id="sidebarNav">
             <a class="nav-item active" data-view="home"><span>🏠</span><b data-i18n="home">الرئيسية</b></a>
@@ -46,7 +46,7 @@
             <a class="nav-item" data-view="media"><span>🎬</span><b data-i18n="media">فيديو ومواقع</b></a>
         </nav>
         <div class="sidebar-stats">
-            <div class="stat-pill"><b id="statTotal">1000</b><span data-i18n="jokes_count">نكتة</span></div>
+            <div class="stat-pill"><b id="statTotal">1400</b><span data-i18n="jokes_count">نكتة</span></div>
             <div class="stat-pill"><b id="statFav">0</b><span data-i18n="favorites">المفضّلة</span></div>
         </div>
         <button class="install-btn" id="installBtn" hidden>📲 <span data-i18n="install">تثبيت التطبيق</span></button>
@@ -58,9 +58,9 @@
         <!-- HOME -->
         <section class="view active" id="view-home">
             <div class="hero">
-                <div class="hero-badge" data-i18n="total_badge">1000 نكتة</div>
-                <h1>😂 <span data-i18n="app_name">نكت 1000</span></h1>
-                <p data-i18n="tagline">ألف نكتة تُضحّك من القلب</p>
+                <div class="hero-badge" data-i18n="total_badge">1400 نكتة</div>
+                <h1>😂 <span data-i18n="app_name">نكت 1400</span></h1>
+                <p data-i18n="tagline">ألف وأربعمئة نكتة تُضحّك من القلب</p>
                 <div class="hero-actions">
                     <button class="btn btn-primary" id="heroRandom">🎲 <span data-i18n="surprise">فاجئني!</span></button>
                     <button class="btn btn-ghost" id="heroDaily">📅 <span data-i18n="daily">نكتة اليوم</span></button>
@@ -194,6 +194,14 @@
     <script src="data/age-18.js"></script>
     <script src="data/famous.js"></script>
     <script src="data/contest.js"></script>
+    <script src="data/joke-goha.js"></script>
+    <script src="data/joke-doctor.js"></script>
+    <script src="data/joke-school.js"></script>
+    <script src="data/joke-work.js"></script>
+    <script src="data/joke-dumb.js"></script>
+    <script src="data/joke-tech.js"></script>
+    <script src="data/joke-inlaws.js"></script>
+    <script src="data/joke-animal.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
