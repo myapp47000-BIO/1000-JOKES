@@ -1,5 +1,5 @@
 // Jokes PWA - Service Worker
-const CACHE_NAME = 'jokes-pwa-v1';
+const CACHE_NAME = 'jokes-pwa-v2';
 
 const ASSETS_TO_CACHE = [
     './',
@@ -54,15 +54,16 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
         fetch(event.request)
             .then((response) => {
-                const clone = response.clone();
-                caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+                if (response && response.ok && response.type === 'basic') {
+                    const clone = response.clone();
+                    caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+                }
                 return response;
             })
             .catch(() =>
                 caches.match(event.request).then((cached) => {
                     if (cached) return cached;
-                    if (event.request.headers.get('accept') &&
-                        event.request.headers.get('accept').includes('text/html')) {
+                    if (event.request.mode === 'navigate') {
                         return caches.match('./index.html');
                     }
                     return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
