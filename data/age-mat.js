@@ -5,7 +5,7 @@ J("الزوجة: أريد ساعة جديدة. الزوج: ولماذا؟ قال
 J("الزوجة: أين اختفى الراتب؟ الزوج: أسأليه أنتِ، أنا لم أره أيضاً.", "La femme : Où est passé le salaire ? — Demande-lui, je ne l'ai pas vu non plus.", "married", "", 4.5);
 J("الزوج: أنا رجل بسيط. الزوجة: سأبدأ بتبسيط ميزانيتك.", "Le mari : Je suis un homme simple. — Je vais commencer par simplifier ton budget.", "married", "", 4.6);
 J("الزوجة: أريد أن أدخر مالي. الزوج: ممتاز، ابدئي من راتبي.", "La femme : Je veux épargner mon argent. — Très bien, commence par mon salaire.", "married", "", 4.4);
-J("الزوجة: كل شيء غالي. الزوج: ليس هذا عيباً، هذا الاختصار إلى الحقيقة.", "La femme : Tout est cher. — Ce n'est pas un défaut, c'est un résumé.", "married", "", 4.1);
+J("الزوجة: كل شيء غالي. الزوج: ليس هذا عيباً، هذا مجرد واقع.", "La femme : Tout est cher. — Ce n'est pas un défaut, c'est juste la réalité.", "married", "", 4.6);
 J("الزوجة: اشتريت شيئاً رخيصاً اليوم. الزوج: وما هو؟ قالت: كل ما في المحل.", "La femme : J'ai acheté quelque chose de pas cher aujourd'hui. — Quoi ? — Tout le magasin.", "married", "", 4.8);
 J("الزوج: لماذا كل هذه الحقائب؟ الزوجة: اشتريت أقل من المعتاد.", "Le mari : D'où viennent toutes ces sacoches ? — J'ai acheté moins que d'habitude.", "married", "", 4.7);
 J("الزوج: لماذا أنتِ دائماً على حق؟ الزوجة: لأن راتبك يعرف طريقه إليّ.", "La femme : Pourquoi as-tu toujours raison ? — Parce que ton salaire connaît le chemin qui mène vers moi.", "married", "", 4.3);
@@ -17,7 +17,7 @@ J("الزوج: لماذا تضحك على هاتفك؟ الزوجة: لأن زو
 J("الزوجة: أنت لا تنظر إليّ. الزوج: نعم، أفعل. قالت: وينظر إلى التلفاز. قال: هذا هو ثالثنا.", "La femme : Tu ne me regardes pas. — Si. — Mais tu regardes la télé. — C'est notre tiers.", "married", "", 4.7);
 J("الزوج: لماذا كل هذه الموسيقى؟ الزوجة: لأن البيت يحتاج إلى أصوات لا تأتي منك.", "Le mari : Pourquoi toute cette musique ? — Parce que la maison a besoin de sons qui ne viennent pas de toi.", "married", "", 4.2);
 J("الزوج: أريد صمتاً. الزوجة: لا مشكلة، اذهب إلى الغرفة. قال: هذه هي الغرفة.", "Le mari : Je veux du silence. — Pas de problème, va dans la chambre. — C'est bien la chambre.", "married", "", 4.6);
-J("الزوجة: لماذا لا تشاهد معي فيلم رومانسي؟ الزوج: أذوقي مختلف. الزوجة: لأنك لا تفرق بين الرعب والرومانسية.", "Le mari : J'ai un goût cinéphile différent. — Tu ne fais pas la différence entre l'horreur et la romance.", "married", "", 4.1);
+J("الزوجة: لماذا لا تشاهد معي فيلم رومانسي؟ الزوج: ذوقي مختلف. الزوجة: لأنك لا تفرق بين الرعب والرومانسية.", "La femme : Pourquoi ne regardes-tu pas un film romantique avec moi ? — J'ai d'autres goûts. — Tu ne fais pas la différence entre horreur et romance.", "married", "", 4.6);
 J("الزوج: لماذا تأخرتِ؟ الزوجة: انتظرتُ حتى تهدأ. الزوج: وهل تهدأين؟ الزوجة: لا، لذلك تأخرت.", "La femme : Pourquoi as-tu été en retard ? — J'ai attendu que tu te calmes. — Et tu te calmes ? — Non, c'est pour ça que j'ai traîné.", "married", "", 4.3);
 J("الزوج: حماتي ستأتي للزيارة. الزوجة: لا تقلق، نظف البيت. الزوج: ومتى أنظف نفسي؟", "Le mari : Ma belle-mère vient nous rendre visite. — Ne t'inquiète pas, range la maison. — Et moi, quand est-ce que je me nettoie ?", "married", "", 5.0);
 J("الزوجة: أمي ستسكن معنا. الزوج: ممتاز، سأذهب إلى العمل أكثر.", "La femme : Ma mère va habiter avec nous. — Parfait, je vais travailler plus.", "married", "", 4.7);
@@ -43,7 +43,7 @@ J("الزوجة: أنت لا تستمع إليّ أبداً. الزوج: قلت�
 J("الزوجة: أريد اعتذاراً. الزوج: أنا آسف. قالت: ولمَ رفعت صوتك؟", "La femme : Je veux des excuses. — Pardon. — Alors pourquoi as-tu élevé la voix ?", "married", "", 4.8);
 J("الزوجة: نحن لم نختلف يوماً. الزوج: موافق... لا، ليس موافقاً!", "La femme : On ne s'est jamais disputé. — D'accord... non, pas d'accord !", "married", "", 4.7);
 J("الزوجة: أنا دائماً على حق. الزوج: وهذا دليل أنني متزوج.", "La femme : J'ai toujours raison. — La preuve que je suis marié.", "married", "", 4.9);
-J("الزوج: أخبريني بمشكلتك. الزوجة: أنت المشكلة.", "Le mari : Dis-moi ton problème. — C'est toi le problème.", "married", "", 4.6);
+J("قال الزوج لزوجته: أخبريني بصراحة ما مشكلتك؟ فأجابت بهدوء: المشكلة هي أنت يا عزيزي، وأنت تعرف ذلك جيداً.", "Le mari dit à sa femme de lui dire franchement son problème. Elle répond calmement : le problème c'est toi mon cher, et tu le sais très bien.", "married", "", 4.6);
 J("الزوجة: أنت بخيل. الزوج: وأنتِ تسرفين. قالت: إذن لماذا أنت تدفع؟", "La femme : Tu es avare. — Et toi tu dépenses. — Alors pourquoi est-ce que tu paies ?", "married", "", 4.8);
 J("الزوجة: لماذا لا تعتذر؟ الزوج: لن أعتذر حتى تعتذري. قالت: إذن أنت دائماً على خطأ.", "La femme : Pourquoi ne t'excuses-tu pas ? — Je ne m'excuserai pas avant toi. — Dans ce cas tu as toujours tort.", "married", "", 4.5);
 J("الزوجة: تزوجتني لتتغير. الزوج: وتزوجتكِ لأنتبه لكِ.", "La femme : Tu m'as épousée pour changer. — Et je t'ai épousée pour veiller sur toi.", "married", "", 4.3);
@@ -51,7 +51,7 @@ J("الزوجة: أنت بعيد عني. الزوج: أنا في نفس الغر
 J("الزوجة: هل تحبني؟ الزوج: أموت من أجلك. قالت: لا أريد، أريد التسوق.", "La femme : Tu m'aimes ? — Je mourrais pour toi. — Je ne veux pas, je veux faire du shopping.", "married", "", 4.9);
 J("الزوجة: لماذا تنسى كل شيء؟ الزوج: لا، أتذكر المهم فقط. قالت: وما هو؟ قال: أنني لا أذكر.", "La femme : Tu oublies tout. — Non, je me souviens seulement de l'important. — Et c'est quoi ? — Que je ne me souviens pas.", "married", "", 4.4);
 J("الزوجة: أنت لا تقول أحبك بصوت عالٍ. الزوج: أحبك! قالت: ليس هنا.", "La femme : Dis-le à voix haute. — Je t'aime ! — Pas ici.", "married", "", 4.6);
-J("الزوج: أريد راحة. الزوجة: اذهب إلى العمل.", "Le mari : J'ai besoin de repos. — Va travailler.", "married", "", 4.8);
+J("قال الزوج: أريد أن أرتاح قليلاً اليوم. فأجابت الزوجة: اذهب إلى العمل فوراً، فهناك ترتاح مني طوال النهار.", "Le mari dit qu'il veut se reposer un peu aujourd'hui. La femme répond : va travailler tout de suite, là-bas tu te reposes de moi.", "married", "", 4.8);
 J("الزوج: أنتِ متعبة كل ليلة. الزوجة: لأنني لا أنام قبل أن تنام أنت.", "La femme : Tu es fatigué tous les soirs. — Parce que je ne dors pas avant que tu t'endormes.", "married", "", 4.2);
 J("الزوج: لماذا استغرق التسوق ثلاث ساعات؟ الزوجة: لأنني دخلتُ.", "Le mari : Comment un shopping peut-il durer trois heures ? — J'y suis entrée.", "married", "", 4.9);
 J("الزوجة: جربت هذا الفستان، ما رأيك؟ الزوج: جميل. أي واحد غير هذا؟", "La femme : J'ai essayé cette robe, tu en penses quoi ? — Belle. Laquelle d'après celle-là ?", "married", "", 4.7);
@@ -62,7 +62,7 @@ J("الزوجة: هل تتذكر يوم زواجنا؟ الزوج: نعم، كل
 J("الزوج: أشعر بالألم بعد الخمسين. الزوجة: أنت لم تكمل الخمسين إلا الأسبوع الماضي.", "Le mari : J'ai mal après cinquante ans. — Tu n'as pas eu cinquante ans la semaine dernière.", "married", "", 4.4);
 J("الزوجة: من أجمل، أنا أم جارتك؟ الزوج: أنتِ بالطبع. قالت: ولماذا تنظر إليها؟ قال: لأتأكد أني لا أخطئ.", "La femme : Qui est la plus belle, moi ou ta voisine ? — Toi, évidemment. — Alors pourquoi la regardes-tu ? — Pour vérifier que je ne me trompe pas.", "married", "", 5.0);
 J("الزوجة: متى آخر مرة اشتقتَ إليّ؟ الزوج: قبل دقيقتين، عندما خرجتِ.", "La femme : Quand tu as pensé à moi la dernière fois ? — Il y a deux minutes, quand tu es sortie.", "married", "", 4.7);
-J("الزوجة: أنت لا تشبه زوجي الأول. الزوج: وأنتِ لا تشبه زوجتي الأولى.", "La femme : Tu n'es plus le mari de mon premier mariage. — Et tu n'es plus la femme de mon premier mariage.", "married", "", 4.1);
+J("الزوجة: أنتَ لا تشبه زوجي الأول. الزوج: وأنتِ لا تشبه زوجتي الأولى.", "La femme : Tu ne ressembles pas à mon premier mari. — Et toi, tu ne ressembles pas à ma première femme.", "married", "", 4.6);
 J("الزوجة: لماذا أحضرت حقيبة السفر؟ الزوج: لن أعود. قالت: في رحلة.", "Le mari : Pourquoi as-tu pris ta valise ? — Je ne reviendrai pas. — En voyage.", "married", "", 4.5);
 J("الزوجة: أريد كلباً. الزوج: لا. قالت: أنا أيضاً.", "La femme : Je veux un chien. — Non. — Moi aussi.", "married", "", 4.8);
 J("الزوجة: أين ذهبت في شبابك؟ الزوج: إلى البيت لأتزوجك... وبقيت.", "La femme : Où étais-tu dans ta jeunesse ? — À la maison pour t'épouser... et je suis resté.", "married", "", 4.6);
