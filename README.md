@@ -12,4 +12,4 @@
 🎵 موسيقى هادئة مدمجة مع زر تشغيل/إيقاف.
 🌍 لغتان: العربية والفرنسية.
 📴 يعمل أوفلاين وسريع وخفيف.
-![Image Alt](    )
+![Image Alt](https://github.com/myapp47000-BIO/1000-JOKES/blob/ba5e09082b171404193ec9646dcccaf1981cd407/WhatsApp%20Image%202026-10-19%20at%2021.24.55.jpeg))
