@@ -56,6 +56,22 @@ a { text-decoration: none; color: inherit; }
 }
 .icon-btn:hover { background: rgba(245, 158, 11, .14); color: var(--pri2); }
 .icon-btn svg { width: 21px; height: 21px; }
+
+/* ---------- Music button ---------- */
+#musicBtn { position: relative; }
+#musicBtn .ic-muted { display: none; }
+#musicBtn:not(.music-on) .ic-music { display: none; }
+#musicBtn:not(.music-on) .ic-muted { display: block; }
+#musicBtn.music-on {
+    background: var(--grad); color: #fff;
+    box-shadow: 0 3px 12px rgba(234, 88, 12, .38);
+    animation: musicPulse 2.2s ease-in-out infinite;
+}
+#musicBtn.music-on:hover { color: #fff; }
+@keyframes musicPulse {
+    0%, 100% { box-shadow: 0 3px 12px rgba(234, 88, 12, .38); }
+    50% { box-shadow: 0 3px 18px rgba(234, 88, 12, .62); }
+}
 .lang-btn {
     min-width: 42px; height: 36px; padding: 0 10px; border-radius: 10px;
     background: var(--grad); color: #fff; font-weight: 800; font-size: .85rem;

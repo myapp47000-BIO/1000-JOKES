@@ -53,6 +53,7 @@
         renderCurrent(true);
         renderVideos();
         renderSources();
+        refreshMusicUI();
         $('#statTotal').textContent = JOKES.length;
     }
 
@@ -451,6 +452,70 @@
         if ($('#jokeModal').classList.contains('open') && e.key === 'ArrowLeft') { modalIdx = (modalIdx + 1) % modalQueue.length; renderModal(); }
         if ($('#jokeModal').classList.contains('open') && e.key === 'ArrowRight') { modalIdx = (modalIdx - 1 + modalQueue.length) % modalQueue.length; renderModal(); }
     });
+
+    // ---------- Calm background music ----------
+    const LS_MUSIC = 'jokes_music';
+    const bgMusic = $('#bgMusic');
+    let musicWanted = localStorage.getItem(LS_MUSIC) === 'on';
+
+    function refreshMusicUI() {
+        const on = musicWanted && !bgMusic.paused;
+        const btn = $('#musicBtn');
+        btn.classList.toggle('music-on', on);
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        const navIcon = $('#musicNavIcon');
+        const navLabel = $('#musicNavItem').querySelector('b');
+        if (navIcon) navIcon.textContent = on ? '🔊' : '🎵';
+        if (navLabel) navLabel.textContent = on ? t('music_pause') : t('music_play');
+    }
+
+    function playMusic() {
+        bgMusic.volume = 0;
+        const p = bgMusic.play();
+        const fade = () => {
+            if (bgMusic.volume < 0.28) {
+                bgMusic.volume = Math.min(0.28, bgMusic.volume + 0.02);
+                setTimeout(fade, 90);
+            }
+        };
+        if (p && p.then) p.then(fade).catch(() => {});
+        else fade();
+        musicWanted = true;
+        localStorage.setItem(LS_MUSIC, 'on');
+        refreshMusicUI();
+    }
+
+    function pauseMusic() {
+        let v = bgMusic.volume;
+        const fadeOut = () => {
+            if (v > 0.02) { v -= 0.03; bgMusic.volume = Math.max(0, v); setTimeout(fadeOut, 60); }
+            else bgMusic.pause();
+        };
+        if (!bgMusic.paused) fadeOut(); else bgMusic.pause();
+        musicWanted = false;
+        localStorage.setItem(LS_MUSIC, 'off');
+        refreshMusicUI();
+    }
+
+    function toggleMusic() {
+        if (bgMusic.paused) { playMusic(); toast(t('music_on_toast')); }
+        else { pauseMusic(); toast(t('music_off_toast')); }
+    }
+
+    $('#musicBtn').addEventListener('click', toggleMusic);
+    $('#musicNavItem').addEventListener('click', toggleMusic);
+    bgMusic.addEventListener('play', refreshMusicUI);
+    bgMusic.addEventListener('pause', refreshMusicUI);
+
+    // Attempt autoplay only if the user previously enabled music; otherwise wait for the button
+    if (musicWanted) {
+        bgMusic.volume = 0.28;
+        const tryPlay = bgMusic.play();
+        if (tryPlay && tryPlay.catch) tryPlay.catch(() => {
+            const once = () => { playMusic(); document.removeEventListener('pointerdown', once); };
+            document.addEventListener('pointerdown', once);
+        });
+    }
 
     // ---------- Init ----------
     $('#statTotal').textContent = JOKES.length;

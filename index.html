@@ -24,6 +24,10 @@
         </button>
         <div class="logo" id="logoHome"><span class="logo-emoji">😂</span><span data-i18n="app_name">نكت 1400</span></div>
         <div class="header-actions">
+            <button class="icon-btn" id="musicBtn" title="🎵" aria-label="music" aria-pressed="false">
+                <svg class="ic-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                <svg class="ic-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M2 2l20 20"/></svg>
+            </button>
             <button class="icon-btn" id="randomBtn" title="🎲" aria-label="random">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
             </button>
@@ -44,6 +48,7 @@
             <a class="nav-item" data-view="top"><span>🏆</span><b data-i18n="top">الأعلى تقييماً</b></a>
             <a class="nav-item" data-view="fav"><span>❤️</span><b data-i18n="favorites">المفضّلة</b></a>
             <a class="nav-item" data-view="media"><span>🎬</span><b data-i18n="media">فيديو ومواقع</b></a>
+            <a class="nav-item" id="musicNavItem"><span id="musicNavIcon">🎵</span><b data-i18n="music_play">تشغيل الموسيقى</b></a>
         </nav>
         <div class="sidebar-stats">
             <div class="stat-pill"><b id="statTotal">1400</b><span data-i18n="jokes_count">نكتة</span></div>
@@ -178,6 +183,9 @@
 
     <!-- ===== Toast ===== -->
     <div class="toast" id="toast"></div>
+
+    <!-- ===== Calm background music ===== -->
+    <audio id="bgMusic" src="assets/music.wav" loop preload="none"></audio>
 
     <footer class="footer">
         <p>😂 <span data-i18n="footer_rights">تطبيق ترفيهي مجاني للمتعة والضحك</span></p>
